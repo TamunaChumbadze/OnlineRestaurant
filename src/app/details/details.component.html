@@ -1,0 +1,17 @@
+<section class="food-detail">
+  <div class="food-card">
+    <div class="food-image">
+      <img [src]="foodDetail.image" alt="{{ foodDetail.name }}" />
+    </div>
+    <div class="food-info">
+      <h2>{{ foodDetail.name }}</h2>
+      <p>{{ foodDetail.price }}$</p>
+      <p>{{ foodDetail.nuts ? "Contains Nuts" : "No Nuts" }}</p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores,
+        commodi!
+      </p>
+      <button (click)="addToCart(foodDetail)" class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+.categories {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    margin: 20px 0;
+  }
+  
+  .categories div {
+    background-color:  #bee2bf;
+    padding: 10px 20px;
+    border-radius: 25px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+  }
+  
+  .categories div:hover {
+    background-color: #4CAF50; 
+    color: white; 
+    transform: translateY(-5px); 
+  }
+  
+  .categories a {
+    text-decoration: none; 
+    font-size: 18px;
+    color: #333; 
+    font-weight: bold;
+    display: block; 
+    text-align: center; 
+  }
+  
+  .categories a:hover {
+    color: #ffffff;
+  }
+  

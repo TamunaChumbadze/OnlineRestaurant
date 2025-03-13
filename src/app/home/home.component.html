@@ -1,0 +1,22 @@
+<app-categories></app-categories>
+
+<section class="productCards">
+  @for (item of foodList; track $index) {
+  <div class="card" style="width: 18rem">
+    <img [src]="item.image" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <h5 class="card-title">{{ item.price }}$</h5>
+      <p>{{ item.nuts ? "Nuts" : "No Nuts" }}</p>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <div class="cardBtn">
+        <a class="btn btn-primary" (click)="goToDetails(item)">Go to details</a>
+        <a class="btn btn-primary" (click)="addToCart(item)" >Add To Cart</a>
+      </div>
+    </div>
+  </div>
+  }
+</section>
