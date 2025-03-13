@@ -2,20 +2,31 @@
 <h2>Cart</h2>
 
 
-<section class="baskets">
+<table class="cart-table">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total Price</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+  <tbody>
     @for (item of cartItems; track $index) {
-        <div class="cart-item" data-id="{{item.id}}">
-
-            <img [src]="item.product.image" alt="{{item.product.name}}" />
-            <h3>{{ item.product.name }}</h3>
-            <p>Price: {{ item.product.price }}$</p>
-            <p>Quantity: 
-              <button (click)="decreaseQuantity(item)" class="decrease-quantity">-</button>
-              <span class="quantity">{{ item.quantity }}</span>
-              <button (click)="increaseQuantity(item)" class="increase-quantity">+</button>
-            </p>
-            <p>Total Price: {{ item.product.price * item.quantity }}$</p>
-            <button (click)="removeFromCart(item)">Remove</button>
-          </div>
+      <tr data-id="{{item.id}}">
+        <td><img [src]="item.product.image" alt="{{item.product.name}}" class="product-image" /></td>
+        <td>{{ item.product.name }}</td>
+        <td>{{ item.product.price }}$</td>
+        <td>
+          <button (click)="decreaseQuantity(item)" class="decrease-quantity">-</button>
+          <span class="quantity">{{ item.quantity }}</span>
+          <button (click)="increaseQuantity(item)" class="increase-quantity">+</button>
+        </td>
+        <td>{{ item.product.price * item.quantity }}$</td>
+        <td><button (click)="removeFromCart(item)" class="remove-button">Remove</button></td>
+      </tr>
     }
-</section>
+  </tbody>
+</table>

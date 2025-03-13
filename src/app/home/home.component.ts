@@ -3,10 +3,11 @@ import { CategoriesComponent } from "../categories/categories.component";
 import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
 import { CartService } from '../cart.service';
+import { LoaderComponent } from "../loader/loader.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CategoriesComponent],
+  imports: [CategoriesComponent, LoaderComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']  
 })

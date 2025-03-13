@@ -56,7 +56,7 @@ export class CartComponent {
 
     this.apiS.removeFromBasket(item.product.id).subscribe({
       next: () => {
-        alert("პროდუქტი კალათიდან წაიშალა წარმატებით");
+        alert("პროდუქტი კალათიდან წარმატებით წაიშალა");
         this.cartItems = this.cartItems.filter(i => i.product.id !== item.product.id);  
         this.updateCartCount();
       },
